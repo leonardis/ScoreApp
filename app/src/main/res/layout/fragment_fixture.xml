@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+
+
+	    <androidx.recyclerview.widget.RecyclerView
+		    android:id="@+id/recyclerView"
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:paddingTop="@dimen/spacing_huge"
+		    app:layout_constraintTop_toTopOf="parent"
+		    app:layout_constraintBottom_toBottomOf="parent"
+		    tools:listitem="@layout/item_fixture_view"
+	    />
+
+	    <TextView
+		    style="@style/TextPrimaryLarge"
+		    android:id="@+id/textView_title"
+		    android:layout_width="match_parent"
+		    android:layout_height="?android:attr/actionBarSize"
+		    android:text="@string/fixture"
+		    android:gravity="center"
+		    android:background="@drawable/bg_gradient_wine"
+		    app:layout_constraintStart_toStartOf="parent"
+		    app:layout_constraintTop_toTopOf="parent"
+		    app:layout_constraintEnd_toEndOf="parent"
+	    />
+
+	    <ImageView
+		    android:id="@+id/imageView_filter"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/ic_filter_list"
+	        android:layout_margin="@dimen/spacing_xlarge"
+		    app:layout_constraintTop_toTopOf="parent"
+		    app:layout_constraintEnd_toEndOf="parent"
+	    />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

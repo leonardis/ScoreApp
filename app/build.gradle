@@ -23,16 +23,22 @@ android {
     dataBinding {
         enabled = true
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.ext.kotlinVersion}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.ext.kotlinVersion}"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appCompatVersion}"
     implementation "androidx.core:core-ktx:${rootProject.ext.coreVersion}"
-    /*testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'*/
+    implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintLayoutVersion}"
+
+    implementation "android.arch.navigation:navigation-fragment:${rootProject.ext.navigationVersion}"
+    implementation "android.arch.navigation:navigation-ui-ktx:${rootProject.ext.navigationVersion}"
 
     implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxJavaVersion}"
     implementation "io.reactivex.rxjava2:rxkotlin:${rootProject.ext.rxKotlinVersion}"
@@ -47,14 +53,7 @@ dependencies {
     implementation "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
     kapt "com.google.dagger:dagger-compiler:${rootProject.ext.daggerVersion}"
 
-    /*implementation "com.facebook.stetho:stetho-okhttp3:${stethoVersion}"
-    implementation "com.facebook.fresco:fresco:${frescoVersion}"
-
-    implementation "org.greenrobot:eventbus:${eventBusVersion}"*/
+    implementation "org.greenrobot:eventbus:${rootProject.ext.eventBusVersion}"
 
     implementation "com.github.burakeregar:EasiestGenericRecyclerAdapter:${rootProject.ext.easiestGenericRecyclerAdapterVersion}"
-
-    /*implementation "android.arch.persistence.room:runtime:${rootProject.ext.roomVersion}"
-    implementation "android.arch.persistence.room:rxjava2:1.0.0-alpha5"
-    kapt "android.arch.persistence.room:compiler:${rootProject.ext.roomVersion}"*/
 }

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ScoreApp</string>
+	<string name="fixture">Fixtures</string>
+	<string name="result">Results</string>
+	<string name="home">Home</string>
+	<string name="away">Away</string>
+	<string name="postponed">Postponed</string>
+	<string name="competitions">Competitions</string>
+	<string name="restore">Restore</string>
 </resources>
